@@ -1,0 +1,13 @@
+objeto Pessoa
+	t Nome
+	t Sobrenome = "Silva"
+	n Idade = 18
+
+	andar
+		imprime Nome + " andou"
+
+	andar(t rua)
+		imprime Nome + " ando na rua: " + rua
+
+	retornarIdade
+		retorna Idade

@@ -1,0 +1,12 @@
+objeto Trabalhador herda Pessoa
+	t Profissao
+	t Empresa = "Unicef"
+
+	andar
+		imprimir "Trabalhador " + pai.Nome + " andou"
+
+	setarProfissao(t profissao)
+		eu.Profissao = profissao
+
+	trabalhar(n horasDeTrabalho)
+		imprimir "Trabalhador " + pai.Nome + " trabalhou " + horasDeTrabalho + " na empresa: " + eu.Profissao
