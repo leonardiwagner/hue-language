@@ -2,18 +2,22 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            hue_language: ['./hue-language/*.js']
+            hue_language: [
+                            './src/hue-language/statement.js',
+                            './src/hue-language/class.js',
+                            './src/hue-language/compilator.js',
+                        ]
         },
         concat: {
             hue_language: {
-                src: ['./hue-language/compiler.js','./hue-language/class.js'],
-                dest: './hue-language/hue-language.js'
+                src: ['./src/hue-language/*.js'],
+                dest: './src/hue-language/hue-language.js'
             }
         },
         watch: {
             hue_language: {
-                files: ['./hue-language/*.js'],
-                tasks: ['jshint', 'concat']
+                files: ['./src/hue-language/*.js','./test/*/*.js'],
+                tasks: ['jshint']
             }
         }
     });

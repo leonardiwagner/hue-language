@@ -1,17 +1,21 @@
 <html>
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script src="../hue-language/statement.js"></script>
+    <script src="../hue-language/class.js"></script>
+    <script src="../hue-language/compilator.js"></script>
     <script>
       $(function() {
-        HueCompiler($("#code").html());
+        var code = $("#code").html();
+        var hueCompiler = new HueCompiler(code);
+
       });
     </script>
   </head>
   <body>
 
 
-    <section id="code">abstrato Pessoa#
+    <section id="code">objeto Pessoa#
   t Nome#
   t Sobrenome#
   n Idade#

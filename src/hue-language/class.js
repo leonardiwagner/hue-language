@@ -1,5 +1,5 @@
-var Class = function(pName, pType){
-  Class.prototype.CLASS_TYPE = ['objeto','interface','abstrato'];
+var HueObject = function(pName, pType){
+  HueObject.prototype.TYPES = ['objeto','interface','abstrato'];
 
   var name;
   var type;
@@ -13,16 +13,16 @@ var Class = function(pName, pType){
   var addVariable = function(pVariable){
     this.variables.push(pVariable);
 
-    console.log('Created variable "' + pVariable.name + "' into class '" + this.name + "'");
+    console.log('Created variable "' + pVariable.name + "' into object '" + this.name + "'");
   };
 
   var addMethod = function(pMethod){
     this.functions.push(pMethod);
 
-    console.log('Created method "' + pMethod.name + "' into class '" + this.name + "'");
+    console.log('Created method "' + pMethod.name + "' into object '" + this.name + "'");
   };
 
-  console.log('Created class "' + this.name + '" of type "' + this.type + '"');
+  console.log('Created object "' + this.name + '" of type "' + this.type + '"');
 };
 
 var Variable = function(name, type, value){
