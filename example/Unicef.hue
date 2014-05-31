@@ -1,10 +1,10 @@
 objeto Unicef herda Empresa
-	ListaDe Trabalhador Trabalhadores
-	ListaDe Pessoa Pessoas
+  ListaDe Trabalhador Trabalhadores
+  ListaDe Pessoa Pessoas
 
-	entrarNaEmpresa(Pessoa pessoa)
-		eu.Trabalhadores.adicionar(pessoa)
+  entrarNaEmpresa(Pessoa pessoa)
+    eu.Trabalhadores.adicionar(pessoa)
 
-	mostrarPessoasNaEmpresa
-		para(pessoa em eu.Pessoas)
-			imprimir pessoa.verNome
+  mostrarPessoasNaEmpresa
+    para(pessoa em eu.Pessoas)
+      imprimir pessoa.verNome

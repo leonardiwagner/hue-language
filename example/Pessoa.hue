@@ -1,18 +1,18 @@
 abstrato Pessoa
-	t Nome
-	t Sobrenome = "Silva"
-	n Idade = 18
+  t Nome
+  t Sobrenome = "Silva"
+  n Idade = 18
 
-	andar
-		imprimir Nome + " andou"
+  andar
+    imprimir Nome + " andou"
 
-	andar(t rua)
-		imprimir Nome + " andou na rua: " + rua
+  andar(t rua)
+    imprimir Nome + " andou na rua: " + rua
 
   abstrato mostrarIdade
 
-  verNome
+  t verNome
     retornar eu.Nome
 
-	verIdade
-		imprimir eu.Idade
+  verIdade
+    imprimir eu.Idade

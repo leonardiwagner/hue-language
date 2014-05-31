@@ -1,9 +1,9 @@
 objeto Trabalhador herda Pessoa
-	t Profissao
-	t Empresa = "Unicef"
+  t Profissao
+  t Empresa = "Unicef"
 
-	andar
-		imprimir "Trabalhador " + pai.Nome + " andou"
+  andar
+    imprimir "Trabalhador " + pai.Nome + " andou"
 
   mostrarIdade
     se eu.Idade > 18
@@ -11,8 +11,8 @@ objeto Trabalhador herda Pessoa
     senao
       imprimir "Trabalhador menor de idade"
 
-	setarProfissao(t profissao)
-		eu.Profissao = profissao
+  setarProfissao(t profissao)
+    eu.Profissao = profissao
 
-	trabalhar(n horasDeTrabalho)
-		imprimir "Trabalhador " + pai.Nome + " trabalhou " + horasDeTrabalho + " na empresa: " + eu.Profissao
+  trabalhar(n horasDeTrabalho)
+    imprimir "Trabalhador " + pai.Nome + " trabalhou " + horasDeTrabalho + " na empresa: " + eu.Profissao
