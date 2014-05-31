@@ -5,6 +5,12 @@ objeto Trabalhador herda Pessoa
 	andar
 		imprimir "Trabalhador " + pai.Nome + " andou"
 
+  mostrarIdade
+    se eu.Idade > 18
+      imprimir "Idade do trabalhador: " + pai.Idade      
+    senao
+      imprimir "Trabalhador menor de idade"
+
 	setarProfissao(t profissao)
 		eu.Profissao = profissao
 

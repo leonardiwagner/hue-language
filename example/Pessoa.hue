@@ -1,13 +1,18 @@
-objeto Pessoa
+objeto abstrato Pessoa
 	t Nome
 	t Sobrenome = "Silva"
 	n Idade = 18
 
 	andar
-		imprime Nome + " andou"
+		imprimir Nome + " andou"
 
 	andar(t rua)
-		imprime Nome + " ando na rua: " + rua
+		imprimir Nome + " andou na rua: " + rua
 
-	retornarIdade
-		retorna Idade
+  abstrato mostrarIdade
+
+  verNome
+    retornar eu.Nome
+
+	verIdade
+		imprimir eu.Idade
