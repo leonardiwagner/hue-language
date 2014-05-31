@@ -7,8 +7,6 @@ function HueCompiler(code){
   var codeLines = new Array();
   var lines = code.split(BREAK_LINE_CHARACTER);
   for(var i = 0; i < lines.length; i++){
-    
-
     //check identation level
     var identationLevel = 0;
     charactersInLine = lines[i].split('');
@@ -20,21 +18,13 @@ function HueCompiler(code){
     codeLines.push(new Line(i, identationLevel,lines[i]));
   }
 
+  //process lines
   var classes = ['objeto','interface','abstrato'];
   var enteredIntoAFunction = false;
   var currentClass = null;
   for(var i = 0; i < codeLines.length; i++){
     line = codeLines[i];
-    /*
-    //check if this line is the first line of a function
-    if(i > 0){
-      if(codeLines[i].identationLevel > codeLines[i -1].identationLevel){
-        enteredIntoAFunction = true;
-      }else if(codeLines[i].identationLevel < codeLines[i -1].identationLevel){
-        enteredIntoAFunction = false;
-      }
-    }
-  */
+
     if(line.identationLevel == 0 && classes.indexOf(line.words[0]) >= 0){
       //it's a class!
       if(line.words.length == 2){
