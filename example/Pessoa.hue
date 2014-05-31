@@ -1,4 +1,4 @@
-objeto abstrato Pessoa
+abstrato Pessoa
 	t Nome
 	t Sobrenome = "Silva"
 	n Idade = 18

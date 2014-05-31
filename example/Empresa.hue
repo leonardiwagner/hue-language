@@ -1,3 +1,3 @@
-objeto interface Empresa
+interface Empresa
 	entrarNaEmpresa(Pessoa pessoa)
 	mostrarPessoasNaEmpresa
