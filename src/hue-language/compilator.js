@@ -1,8 +1,7 @@
 var HueCompiler = function(){
   var BREAK_LINE_CHARACTER = '#';
-  var RESERVED_WORDS = ['objeto','abstrato','interface','t','n','listade','se','senao','para','em','herda','retorna'];
+  var RESERVED_WORDS = ['objeto','abstrato','interface','t','n','listade','se','senao','para','em','herda','retorna','eu','pai'];
 
-  
   function HueCompiler(pCode){
     var codeLines = this.readCodeLines(pCode);
     this.processLines(codeLines);
@@ -38,7 +37,10 @@ var HueCompiler = function(){
         }
       }else if(line.identationLevel > 0){
         if(line.words.length == 1){
-          //it's a void function
+          //it's a void function without parameters
+          returnType = line.words[0];
+          name = line.words[1];
+          currentClass.addMethod(name, null, null);
         }else if(line.words.lenght == 2){
           //could be a function without parameters, or variable declaration without values
           returnType = line.words[0];
@@ -46,13 +48,31 @@ var HueCompiler = function(){
 
           if(codeLines[i + 1].identationLevel > codeLines[i].identationLevel){
             //function without parameters
-            currentClass.addFunction(name, returnType, null);
+            currentClass.addMethod(name, returnType, null);
           }else{
             //unitialized variable
             currentClass.addVariable(name, returnType, null);
           }
         }else{
+          //could be a lot of things, such variable assignament, if, for...
+          var statements = ['se','senao','para'];
+          if(statments.indexOf(line.words[0]) >= 0){
+            if(line.words[0] == 'if'){
 
+            }
+          }
+
+          if(lines.indexOf('=') > 0){
+            //variable assignment
+            returnType = line.words[0];
+            name = line.words[1];
+            value = line.substr(lines.indexOf('=') + 1);
+
+            currentClass.addVariable(name, returnType, value);
+
+          }
+
+          //var logic = ["se","senao","para"];
         }
       }else{
         //error, just classes in identation lvl 0

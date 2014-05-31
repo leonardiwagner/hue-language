@@ -1,13 +1,14 @@
-var Class = function(){
+var Class = function(pName, pType){
+  Class.prototype.CLASS_TYPE = ['objeto','interface','abstrato'];
+
   var name;
   var type;
   var variables = [];
   var methods = [];
 
-  function Class(pName, pType){
-    this.name = pName;
-    this.type = pType;
-  }
+  //constructor
+  this.name = pName;
+  this.type = pType;
 
   var addVariable = function(pVariable){
     this.variables.push(pVariable);
