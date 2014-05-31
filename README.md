@@ -9,5 +9,5 @@ Programming languages such as C, Java or Python are made to create real-life sof
 
 **Hue features**
 
--100% object-oriented
--Compiler warning for code-smells
+- 100% object-oriented
+- Compiler warning for code-smells
