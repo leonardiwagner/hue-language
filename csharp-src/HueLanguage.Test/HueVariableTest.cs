@@ -6,9 +6,6 @@ namespace HueLanguage.Test
     [TestClass]
     public class HueVariableTest
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
+
     }
 }

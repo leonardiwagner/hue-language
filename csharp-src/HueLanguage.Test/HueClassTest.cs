@@ -1,66 +1,67 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using NUnit.Framework;
+
 using HueLanguage.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HueLanguage.Test
 {
-    [TestClass]
+   
     public class HueClassTest
     {
-        [TestMethod]
+        [Test]
         public void ClassWithInvalidCharacters()
         {
             try
             {
-                var hueClass = new HueClass("1class", "objeto");
+                var hueClass = new HueClass("1class", "class");
 
                 Assert.Fail("should throw error");
             }
             catch (HueException e)
             {
-                Assert.IsTrue(e.number == 2);
-                Assert.IsTrue(e.message == "nome de classe inválido, utilize apenas letras e números sem espaço");
+              Assert.AreEqual(2, e.number);
+              Assert.AreEqual("invalid class name, only letters and numbers without spaces are allowed for class name", e.message);
             }
         }
 
-        [TestMethod]
+        [Test]
         public void ClassWithInvalidCharacters2()
         {
             try
             {
-                var hueClass = new HueClass("test class", "objeto");
+                var hueClass = new HueClass("test class", "classe");
 
                 Assert.Fail("should throw error");
             }
             catch (HueException e)
             {
-                Assert.IsTrue(e.number == 2);
-                Assert.IsTrue(e.message == "nome de classe inválido, utilize apenas letras e números sem espaço");
+              Assert.AreEqual(2, e.number);
+              Assert.AreEqual("invalid class name, only letters and numbers without spaces are allowed for class name", e.message);
             }
         }
 
-        [TestMethod]
+        [Test]
         public void ClassWithValidName()
         {
-            var hueClass = new HueClass("testclass", "objeto");
-            Assert.IsTrue(hueClass.name == "testclass");
+            var hueClass = new HueClass("testclass", "class");
+            Assert.AreEqual("testclass", hueClass.name);
         }
 
-        [TestMethod]
+        [Test]
         public void ClassWithValidType()
         {
-            var hueClass1 = new HueClass("testclass", "objeto");
-            Assert.IsTrue(hueClass1.type == "objeto");
+            var hueClass1 = new HueClass("testclass", "class");
+            Assert.AreEqual("class", hueClass1.type);
 
-            var hueClass2 = new HueClass("testclass", "abstrato");
-            Assert.IsTrue(hueClass2.type == "abstrato");
+            var hueClass2 = new HueClass("testclass", "abstract");
+            Assert.AreEqual("abstract", hueClass2.type);
 
             var hueClass3 = new HueClass("testclass", "interface");
-            Assert.IsTrue(hueClass3.type == "interface");
+            Assert.AreEqual("interface",hueClass3.type);
         }
 
-        [TestMethod]
+        [Test]
         public void ClassWithInvalidType()
         {
             try
@@ -71,8 +72,8 @@ namespace HueLanguage.Test
             }
             catch (HueException e)
             {
-                Assert.IsTrue(e.number == 3);
-                Assert.IsTrue(e.message == "tipo de classe inválido, existe apenas: objeto, abstrato ou interface");
+                Assert.AreEqual(3,e.number);
+                Assert.AreEqual("invalid class type, allowed types are: class, abstract or interface", e.message);
             }
         }
 

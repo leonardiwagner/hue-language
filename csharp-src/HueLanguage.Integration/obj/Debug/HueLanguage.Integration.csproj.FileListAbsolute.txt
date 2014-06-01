@@ -6,3 +6,13 @@ c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLangua
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\HueLanguage.Core.dll
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\HueLanguage.Core.pdb
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\Files\SimpleObject.hue
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\Files\SimpleObject.hue
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\HueLanguage.Integration.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\HueLanguage.Integration.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\HueLanguage.Core.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\HueLanguage.Core.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\obj\Debug\HueLanguage.Integration.csprojResolveAssemblyReference.cache
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\obj\Debug\HueLanguage.Integration.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\obj\Debug\HueLanguage.Integration.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\nunit.framework.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Integration\bin\Debug\nunit.framework.xml

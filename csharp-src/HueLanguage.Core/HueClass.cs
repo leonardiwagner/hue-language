@@ -8,7 +8,7 @@ namespace HueLanguage.Core
 {
     public class HueClass
     {
-        public static List<string> TYPES = new List<string>(){"classe","abstrato","interface"}; 
+        public static List<string> TYPES = new List<string>(){"class","abstract","interface"}; 
 
         public String name;
         public String type;
@@ -17,8 +17,8 @@ namespace HueLanguage.Core
 
         public HueClass(string name, string type, int codeLine = 0)
         {
-            if (!Util.isValidMemberName(name)) { throw new HueException(2, codeLine, "nome de classe inválido, utilize apenas letras e números sem espaço"); }
-            if (TYPES.IndexOf(type) < 0) {  throw new HueException(3,codeLine, "tipo de classe inválido, existe apenas: objeto, abstrato ou interface");}
+          if (!Util.isValidMemberName(name)) { throw new HueException(2, codeLine, "invalid class name, only letters and numbers without spaces are allowed for class name"); }
+            if (TYPES.IndexOf(type) < 0) { throw new HueException(3, codeLine, "invalid class type, allowed types are: class, abstract or interface"); }
             
             this.name = name;
             this.type = type;
@@ -29,9 +29,9 @@ namespace HueLanguage.Core
             this.hueVariables.Add(new HueVariable(name, type, value));
         }
 
-        public void addHueFunction(string name, string type, string value)
+        public void addHueFunction(string name, string type, List<HueVariable> parameters, List<HueCodeLine> codeBlock)
         {
-            this.hueFunctions.Add(new HueFunction(name, type, value));
+          this.hueFunctions.Add(new HueFunction(name, type, parameters, codeBlock));
         }
     }
 

@@ -3,3 +3,8 @@ c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLangua
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Core\bin\Debug\HueLanguage.Core.pdb
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Core\obj\Debug\HueLanguage.Core.dll
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Core\obj\Debug\HueLanguage.Core.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Core\obj\Debug\HueLanguage.Core.csprojResolveAssemblyReference.cache
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Core\obj\Debug\HueLanguage.Core.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Core\bin\Debug\HueLanguage.Core.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Core\bin\Debug\HueLanguage.Core.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Core\obj\Debug\HueLanguage.Core.pdb

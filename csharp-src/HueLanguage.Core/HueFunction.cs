@@ -10,10 +10,10 @@ namespace HueLanguage.Core
     {
         public string type;
         public string name;
-        public List<string> parameters = new List<string>();
+        public List<HueVariable> parameters = new List<HueVariable>();
         public List<HueCodeLine> codeBlock = new List<HueCodeLine>();
 
-        public HueFunction(string type, string name, List<string> parameters, List<HueCodeLine> codeBlock)
+        public HueFunction(string name, string type, List<HueVariable> parameters, List<HueCodeLine> codeBlock)
         {
             this.type = type;
             this.name = name;

@@ -1,14 +1,18 @@
-﻿classe Pessoa
-  texto nome
-  texto sobrenome = "silva"
-  numero idade = 18
+﻿class person
+  text firstName = "joe"
+  text lastName
+  number age = 18
 
-  andar
-    imprime "andou"
+  walk
+    print "walked"
 
-  texto verNome
-    retorna eu.nome
+  text getName
+    return this.firstName + " " + this.lastName
 
-  texto setarNome(texto nome, texto sobrenome)
-    eu.nome = nome
-    eu.sobrenome = sobrenome
+  setAge(number age)
+    this.age = age
+
+  person setPerson(text firstName, text lastName, number age)
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age

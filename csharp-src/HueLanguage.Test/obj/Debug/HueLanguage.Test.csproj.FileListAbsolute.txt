@@ -5,3 +5,12 @@ c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLangua
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\obj\Debug\HueLanguage.Test.pdb
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\bin\Debug\HueLanguage.Core.dll
 c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\bin\Debug\HueLanguage.Core.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\bin\Debug\HueLanguage.Test.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\bin\Debug\HueLanguage.Test.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\bin\Debug\HueLanguage.Core.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\bin\Debug\HueLanguage.Core.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\obj\Debug\HueLanguage.Test.csprojResolveAssemblyReference.cache
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\obj\Debug\HueLanguage.Test.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\obj\Debug\HueLanguage.Test.pdb
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\bin\Debug\nunit.framework.dll
+C:\Users\wagner\Documents\GitHub\hue-language\csharp-src\HueLanguage.Test\bin\Debug\nunit.framework.xml

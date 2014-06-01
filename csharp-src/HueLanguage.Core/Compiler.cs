@@ -22,7 +22,11 @@ namespace HueLanguage.Core
         public List<HueCodeLine> readCodeLines (string code)
         {
             var codeLines = new List<HueCodeLine>();
-            var lines = code.Split(BREAK_LINE_CHARACTER.ToCharArray());
+            //split code lines
+            var lines = code.Replace("\r","").Split('\n');
+            //remove empty lines
+            lines = lines.Where(x => x != "").ToArray();
+
             for(var i = 0; i < lines.Count(); i++){
               //check identation level
               var identationLevel = 0;
@@ -38,67 +42,106 @@ namespace HueLanguage.Core
 
         public void processLines(List<HueCodeLine> codeLines)
         {
-            HueClass currentHueClass = null;
-            for(var i = 0; i < codeLines.Count; i++){
-                var line = codeLines[i];
+          HueClass currentHueClass = null;
+          for (var i = 0; i < codeLines.Count; i++)
+          {
+            var line = codeLines[i];
 
-                if(line.identationLevel == 0 && HueClass.TYPES.IndexOf(line.words[0]) >= 0){
-                  //only HueClasses in the zero identation
-                  if (line.words.Count == 2)
+            if (line.identationLevel == 0 && HueClass.TYPES.IndexOf(line.words[0]) >= 0)
+            {
+              //only HueClasses in the zero identation
+              if (line.words.Count == 2)
+              {
+                //simple HueClass
+                if (currentHueClass != null) this.hueClasses.Add(currentHueClass);
+                currentHueClass = new HueClass(line.words[1], line.words[0]);
+              }
+              else
+              {
+                //a class that extends other
+                //todo: read a class with extensions
+              }
+            }
+            else if (line.identationLevel == 2)
+            {
+              //class elements (variables and functions)
+              if (line.words.Count == 1)
+              {
+                //it's a void function without parameters
+                var name = line.words[0];
+                currentHueClass.addHueFunction(name, null, null, null);
+              }
+              else if (line.words.Count == 2)
+              {
+                //could be a function without parameters, or variable declaration without values
+                var returnType = line.words[0];
+                var name = line.words[1];
+
+                if (codeLines[i + 1].identationLevel > codeLines[i].identationLevel)
+                {
+                  //function without parameters
+                  currentHueClass.addHueFunction(name, returnType, null, null);
+                }
+                else
+                {
+                  //unitialized variable
+                  currentHueClass.addHueVariable(name, returnType, null);
+                }
+              }
+              else
+              {
+                
+                if(line.code.IndexOf('=') > 0){
+                    //variable assignment
+                    var returnType = line.words[0];
+                    var name = line.words[1];
+                    var value = line.code.Substring(line.code.IndexOf('=') + 1).Trim();
+
+                    currentHueClass.addHueVariable(name, returnType, value);
+                }
+                else if (line.code.IndexOf('(') > 0)
+                {
+                  string name = null;
+                  string type = null;
+                  //function with parameters
+                  if (line.words[1] == "(")
                   {
-                    //simple HueClass
-                    if (currentHueClass != null) this.hueClasses.Add(currentHueClass);
-                    currentHueClass = new HueClass(line.words[1], line.words[0]);
+                    //void function
+                    name = line.words[0];
+                  }
+                  else if (line.words[2] == "(")
+                  {
+                    //returning function
+                    type = line.words[0];
+                    name = line.words[1];
                   }
                   else
                   {
-                    //a class that extends other
-                    //todo: read a class with extensions
+                    //todo: throw error
                   }
-                }else if(line.identationLevel > 0){
-                  if(line.words.Count == 1){
-                      //it's a void function without parameters
-                      var returnType = line.words[0];
-                      var name = line.words[1];
-                      currentHueClass.addHueFunction(name, null, null);
-                  }else if(line.words.Count == 2){
-                      //could be a function without parameters, or variable declaration without values
-                      var returnType = line.words[0];
-                      var name = line.words[1];
 
-                      if(codeLines[i + 1].identationLevel > codeLines[i].identationLevel){
-                      //function without parameters
-                          currentHueClass.addHueFunction(name, returnType, null);
-                      }else{
-                      //unitialized variable
-                      currentHueClass.addHueVariable(name, returnType, null);
-                      }
-                }else{
-                    /*
-                    //could be a lot of things, such variable assignament, if, for...
-                    if(statement.TYPES.IndexOf(line.words[0]) >= 0){
-                        if(line.words[0] == "if"){
-                            var statementResult = this.statement.checkExpression(line.Substring(line.IndexOf("if") + 1));
-                        }
-                    }
-                    */
-                    /*
-                    if(line.indexOf('=') > 0){
-                        //variable assignment
-                        returnType = line.words[0];
-                        name = line.words[1];
-                        value = line.substr(lines.indexOf('=') + 1);
+                  //read parameters
+                  var initParam = line.code.IndexOf('(');
+                  var endParam = line.code.IndexOf(')');
 
-                        currentHueClass.addHueVariable(name, returnType, value);
-
-                    }
-                    */
-                    //var logic = ["se","senao","para"];
+                  List<HueVariable> parametersList = new List<HueVariable>();
+                  var parameters = line.code.Substring(initParam + 1, endParam - initParam - 1).Split(',');
+                  for (int j = 0; j < parameters.Count();j++)
+                  {
+                    var variableDeclaration = parameters[j].Trim().Split(' ');
+                    var variableType = variableDeclaration[0];
+                    var variableName = variableDeclaration[1];
+                    parametersList.Add(new HueVariable(variableName, variableType, null));
+                  }
+                  currentHueClass.addHueFunction(name, type, parametersList, null);
                 }
-                }else{
-                //error, just hueObjectes in identation lvl 0
-                }
-            }// end for
+
+              }
+            }
+          }// end for
+
+          //add last class
+          if (currentHueClass != null) this.hueClasses.Add(currentHueClass);
         }
 
     }
