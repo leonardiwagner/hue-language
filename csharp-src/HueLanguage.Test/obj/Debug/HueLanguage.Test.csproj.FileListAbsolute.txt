@@ -1,0 +1,7 @@
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\bin\Debug\HueLanguage.Test.dll
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\bin\Debug\HueLanguage.Test.pdb
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\obj\Debug\HueLanguage.Test.csprojResolveAssemblyReference.cache
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\obj\Debug\HueLanguage.Test.dll
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\obj\Debug\HueLanguage.Test.pdb
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\bin\Debug\HueLanguage.Core.dll
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Test\bin\Debug\HueLanguage.Core.pdb

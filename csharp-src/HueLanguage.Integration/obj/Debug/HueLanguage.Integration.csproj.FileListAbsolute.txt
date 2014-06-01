@@ -1,0 +1,8 @@
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\HueLanguage.Integration.dll
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\HueLanguage.Integration.pdb
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\obj\Debug\HueLanguage.Integration.csprojResolveAssemblyReference.cache
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\obj\Debug\HueLanguage.Integration.dll
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\obj\Debug\HueLanguage.Integration.pdb
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\HueLanguage.Core.dll
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\HueLanguage.Core.pdb
+c:\users\wagner\documents\visual studio 2013\Projects\HueLanguage.Core\HueLanguage.Integration\bin\Debug\Files\SimpleObject.hue

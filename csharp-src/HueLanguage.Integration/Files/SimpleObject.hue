@@ -1,0 +1,14 @@
+﻿classe Pessoa
+  texto nome
+  texto sobrenome = "silva"
+  numero idade = 18
+
+  andar
+    imprime "andou"
+
+  texto verNome
+    retorna eu.nome
+
+  texto setarNome(texto nome, texto sobrenome)
+    eu.nome = nome
+    eu.sobrenome = sobrenome
