@@ -7,14 +7,14 @@ using System.Text.RegularExpressions;
 
 namespace HueLanguage.Core
 {
-    public class HueCodeLine
+    public class HueLine
     {
         public int number;
         public int identationLevel;
         public string code;
         public List<String> words = new List<string>();
 
-        public HueCodeLine(int number, int identationLevel, string code)
+        public HueLine(int number, int identationLevel, string code)
         {
             this.number = number;
             this.identationLevel = identationLevel;

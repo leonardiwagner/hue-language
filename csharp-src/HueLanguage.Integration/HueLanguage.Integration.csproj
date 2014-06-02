@@ -71,11 +71,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="OperationTest.cs" />
     <Compile Include="SimpleObjectTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Files\Operation.hue" />
     <None Include="Files\SimpleObject.hue">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

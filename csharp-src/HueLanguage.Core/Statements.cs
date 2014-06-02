@@ -31,7 +31,7 @@ namespace HueLanguage.Core
                 }
             }
 
-            throw new HueException(1, codeLine,"EXPRESSÃO INVÁLIDA");
+            throw new HueError(1, codeLine,"EXPRESSÃO INVÁLIDA");
         }
     }
 }

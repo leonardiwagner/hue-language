@@ -40,8 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compiler.cs" />
-    <Compile Include="Errors.cs" />
-    <Compile Include="HueCodeLine.cs" />
+    <Compile Include="HueError.cs" />
+    <Compile Include="HueLine.cs" />
     <Compile Include="HueFunction.cs" />
     <Compile Include="HueVariable.cs" />
     <Compile Include="HueClass.cs" />

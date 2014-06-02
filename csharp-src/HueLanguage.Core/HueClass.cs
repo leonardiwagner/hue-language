@@ -17,21 +17,21 @@ namespace HueLanguage.Core
 
         public HueClass(string name, string type, int codeLine = 0)
         {
-          if (!Util.isValidMemberName(name)) { throw new HueException(2, codeLine, "invalid class name, only letters and numbers without spaces are allowed for class name"); }
-            if (TYPES.IndexOf(type) < 0) { throw new HueException(3, codeLine, "invalid class type, allowed types are: class, abstract or interface"); }
+          if (!Util.isValidMemberName(name)) { throw new HueError(2, codeLine, "invalid class name, only letters and numbers without spaces are allowed for class name"); }
+            if (TYPES.IndexOf(type) < 0) { throw new HueError(3, codeLine, "invalid class type, allowed types are: class, abstract or interface"); }
             
             this.name = name;
             this.type = type;
         }
 
-        public void addHueVariable(string name, string type, string value)
+        public void addHueVariable(HueVariable hueVariable)
         {
-            this.hueVariables.Add(new HueVariable(name, type, value));
+            this.hueVariables.Add(hueVariable);
         }
 
-        public void addHueFunction(string name, string type, List<HueVariable> parameters, List<HueCodeLine> codeBlock)
+        public void addHueFunction(HueFunction hueFunction)
         {
-          this.hueFunctions.Add(new HueFunction(name, type, parameters, codeBlock));
+          this.hueFunctions.Add(hueFunction);
         }
     }
 

@@ -18,7 +18,7 @@ namespace HueLanguage.Test
 
                 Assert.Fail("should throw error");
             }
-            catch (HueException e)
+            catch (HueError e)
             {
               Assert.AreEqual(2, e.number);
               Assert.AreEqual("invalid class name, only letters and numbers without spaces are allowed for class name", e.message);
@@ -34,7 +34,7 @@ namespace HueLanguage.Test
 
                 Assert.Fail("should throw error");
             }
-            catch (HueException e)
+            catch (HueError e)
             {
               Assert.AreEqual(2, e.number);
               Assert.AreEqual("invalid class name, only letters and numbers without spaces are allowed for class name", e.message);
@@ -70,7 +70,7 @@ namespace HueLanguage.Test
 
                 Assert.Fail("should throw error");
             }
-            catch (HueException e)
+            catch (HueError e)
             {
                 Assert.AreEqual(3,e.number);
                 Assert.AreEqual("invalid class type, allowed types are: class, abstract or interface", e.message);

@@ -11,14 +11,16 @@ namespace HueLanguage.Core
         public string type;
         public string name;
         public List<HueVariable> parameters = new List<HueVariable>();
-        public List<HueCodeLine> codeBlock = new List<HueCodeLine>();
+        public List<HueLine> codeBlock = new List<HueLine>();
 
-        public HueFunction(string name, string type, List<HueVariable> parameters, List<HueCodeLine> codeBlock)
+        public HueFunction(string name, string type, List<HueVariable> parameters, List<HueLine> codeBlock)
         {
             this.type = type;
             this.name = name;
             this.parameters = parameters;
-            this.codeBlock = codeBlock;
+            
+            //currently code block is via direct access
+            //this.codeBlock = codeBlock;
         }
     }
 }

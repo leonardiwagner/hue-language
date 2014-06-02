@@ -7,7 +7,8 @@
     print "walked"
 
   text getName
-    return this.firstName + " " + this.lastName
+    var name = this.firstName + " " + this.lastName
+    return name
 
   setAge(number age)
     this.age = age
