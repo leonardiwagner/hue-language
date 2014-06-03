@@ -9,5 +9,10 @@ Programming languages such as C, Java or Python are made to create real-life sof
 
 **Hue features**
 
+- Designed to avoid commom mistakes and to enforce good programmimg practices
 - 100% object-oriented
-- Compiler warning for code-smells
+- Clear compiler errors and warnings for code-smells
+
+
+####Learn Hue!
+See: [variables](https://github.com/leonardiwagner/hue-language/wiki/Variables-and-Constants), [functions](https://github.com/leonardiwagner/hue-language/wiki/Functions), [classes and interfaces](https://github.com/leonardiwagner/hue-language/wiki/4.-Classes-and-Interfaces), [etc...](https://github.com/leonardiwagner/hue-language/wiki/1.-Hue-Language-and-Synthax)
