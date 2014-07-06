@@ -1,5 +1,0 @@
-﻿class default
-
-  main
-    number result
-    result = 1 + 1
