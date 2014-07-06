@@ -1,8 +1,7 @@
 var HueObject = function(pName, pType){
   HueObject.prototype.TYPES = ['objeto','interface','abstrato'];
 
-  var name;
-  var type;
+
   var variables = [];
   var methods = [];
 

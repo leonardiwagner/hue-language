@@ -12,17 +12,17 @@ module.exports = function(grunt){
         options: {
           reporter: 'spec'
         },
-        src: ['test/*.js']
+        src: ['test/**/*.js']
       }
     },
 
     watch: {
       src: {
         files: ['*.js'],
-        tasks: ['jshint:src']
+        tasks: ['jshint:src','mochaTest']
       },
       test: {
-        files: ['test/*.js'],
+        files: ['test/**/*.js'],
         tasks: ['jshint:test','mochaTest']
       }
     }
@@ -34,5 +34,5 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('test', ['jshint','mochaTest']);
-  grunt.registerTask('default', ['mochaTest']);
+  grunt.registerTask('default', ['watch']);
 };
