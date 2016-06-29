@@ -1,0 +1,10 @@
+{
+  "name": "hue-language",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha --harmony \"test/**/*.js\""
+  },
+  "dependencies": {
+    "mocha": "^2.5.3"
+  }
+}
