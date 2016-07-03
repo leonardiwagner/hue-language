@@ -3,37 +3,42 @@ const HueClass = require('./hueClass');
 const breakLine = '\n';
 
 class Compiler {
+  constructor(){
+    this.hueClasses = [];
+  }
+
+
    compile(code) {
     const lines = code.split(breakLine);
 
-    let blockScope = "";
-    let isReadingBlockScope = false;
+    this.readHueClasses(lines);
 
-    let hueClass = undefined;
+     return this.hueClasses;
+  }
+
+  readHueClasses(lines){
     for(let i = 0; i < lines.length; i++){
-      const line = lines[i];
-      const indentationSize = this.getIdentationSize(line);
-      const words = line.split(' ');
+      const lineWords = lines[i].split(' ');
 
-      if(isReadingBlockScope) {
-        if(indentationSize === 0){
-          isReadingBlockScope = false;
-        } else {
-          blockScope += line + breakLine;
+      if(lineWords[0] === 'class') {
+        const hueClassName = lineWords[1];
+        let hueClassLines = '';
+        i++;
+
+        while(this.getIdentationSize(lines[i]) !== 0){
+          hueClassLines += lines[i] + breakLine;
+          i++;
         }
-      }
 
-      if(words[0] === 'class'){
-        isReadingBlockScope = true;
-        const className = words[1];
-        hueClass = new HueClass(className);
+        this.hueClasses.push(new HueClass(hueClassName, hueClassLines))
+        i--;
       }
     }
-
-     console.log(blockScope);
   }
 
   getIdentationSize(line) {
+    if(!line) return 0;
+
     let i = 0;
     for(i; i < line.length; i++){
       if(line[i] !== ' ') break;

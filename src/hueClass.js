@@ -1,6 +1,7 @@
 class HueClass {
-  constructor(className){
+  constructor(className, classCode){
     this.name = className;
+    this.classCode = classCode;
     this.hueVariables = [];
     this.hueFunctions = [];
   }

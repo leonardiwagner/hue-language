@@ -1,0 +1,8 @@
+class Person
+  name = "John"
+  getName()
+    return name
+
+class Company
+  getName(someName)
+    return someName
